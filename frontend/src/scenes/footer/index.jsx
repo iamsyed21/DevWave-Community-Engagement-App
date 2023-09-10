@@ -19,7 +19,7 @@ const Footer = () => {
             🎥 Explore more of my projects or get in touch through my portfolio: <a target='_blank' rel="noreferrer" href='https://syedmoinahmed.dev/'>Here</a>. Have questions or just want to chat about your favorite movies? Feel free to reach out – I'm all ears (not literally)!
             </li>
             <li>
-            📝 The source code for this entire project is available at Repository : <a target='_blank' rel="noreferrer" href='https://github.com/iamsyed21/Community-Engagement-Application'> Frontend & Backend</a> 
+            📝 The source code for this entire project is available at Repository : <a target='_blank' rel="noreferrer" href='https://github.com/iamsyed21/DevWave-Community-Engagement-App'> Frontend & Backend</a> 
             </li>
           </ul>
 
