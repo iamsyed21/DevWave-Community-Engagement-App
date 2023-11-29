@@ -35,3 +35,11 @@
     text-decoration: none !important;
     color:cadetblue
   }
+
+  .loadingBox{
+    background-color: #80808050;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 8px;
+  }

@@ -67,7 +67,7 @@ const MyPostWidget = ({ picturePath }) => {
   
     try {
       console.log("token", token);
-      const response = await axios.post(`http://localhost:3001/posts/`, postData, {
+      const response = await axios.post(`https://devwave-community-engagement-app.onrender.com/posts/`, postData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json', 

@@ -90,7 +90,7 @@ const Form = () => {
     onSubmitProps.setSubmitting(true);
 
     const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+      "https://devwave-community-engagement-app.onrender.com/auth/register",
       {
         method: "POST",
         headers: {
@@ -104,7 +104,7 @@ const Form = () => {
 
     if (savedUser) {
       // Automatically log in the user after successful registration
-      const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+      const loggedInResponse = await fetch("https://devwave-community-engagement-app.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -128,7 +128,7 @@ const Form = () => {
 
   const login = async (values, onSubmitProps) => {
     onSubmitProps.setSubmitting(true); // Show the loading spinner
-    const loggedInResponse = await fetch("http://localhost:3001/auth/login", {
+    const loggedInResponse = await fetch("https://devwave-community-engagement-app.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
@@ -136,12 +136,7 @@ const Form = () => {
     const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     if (loggedIn) {
-      dispatch(
-        setLogin({
-          user: loggedIn.user,
-          token: loggedIn.token,
-        })
-      );
+      dispatch(setLogin({user: loggedIn.user, token: loggedIn.token,}));
       navigate("/home");
     }
     onSubmitProps.setSubmitting(false); // Hide the loading spinner
@@ -311,7 +306,14 @@ const Form = () => {
               {isLogin ? "LOGIN" : "REGISTER"}
             </Button>
             {isSubmitting && (
-            <ClipLoader color="#36D7B7" loading={isSubmitting} size={50} />
+            <div className="loadingBox">
+           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <ClipLoader color="#36D7B7" loading={isSubmitting} size={60} />
+</div>
+
+            <h1>This website is hosted on the render free instance type ❤️, so 'Time to First Byte' may take a moment. Your patience is appreciated.</h1>
+            <div/>
+            </div>
             )}
           
             <Typography
